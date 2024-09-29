@@ -1,8 +1,8 @@
-// src/app/home/page.tsx
 'use client';
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Quiz from '../quiz/page';
 
 export default function HomePage() {
      const router = useRouter();
@@ -28,6 +28,8 @@ export default function HomePage() {
      return (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '100vh' }}>
                <h1>Welcome, {username}!</h1>
+
+               <Quiz />
 
                <button onClick={handleLogout} style={{ padding: '10px 20px' }}>
                     Logout

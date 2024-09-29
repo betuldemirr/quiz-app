@@ -1,7 +1,6 @@
 const USER_STORAGE_KEY = 'user';
 const IS_LOGGED_IN_KEY = 'isLoggedIn';
 
-// Login işlemi
 export const login = (username: string): boolean => {
      const existingUser = localStorage.getItem(USER_STORAGE_KEY);
 
