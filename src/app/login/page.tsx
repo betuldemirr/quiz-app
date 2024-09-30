@@ -31,7 +31,7 @@ export default function LoginPage() {
                     style={{ marginBottom: '10px', padding: '8px' }}
                />
                <button onClick={handleLogin} style={{ padding: '10px 20px' }}>
-                    Login
+                    Join Quiz
                </button>
                {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>

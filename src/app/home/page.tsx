@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Quiz from '../quiz/page';
+import styled from 'styled-components';
 
 export default function HomePage() {
      const router = useRouter();
@@ -25,15 +25,27 @@ export default function HomePage() {
           router.push('/login');
      };
 
+     const handleStartQuiz = () => {
+          router.push('/quiz');
+     };
+
      return (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '100vh' }}>
+          <Container>
                <h1>Welcome, {username}!</h1>
-
-               <Quiz />
-
+               <button onClick={handleStartQuiz} style={{ padding: '10px 20px', margin: '20px 0', fontSize: '18px' }}>
+                    Quiz Başla
+               </button>
                <button onClick={handleLogout} style={{ padding: '10px 20px' }}>
                     Logout
                </button>
-          </div>
+          </Container>
      );
 }
+
+const Container = styled.div`
+     display: 'flex';
+     flex-direction: 'column';
+     align-items: 'center';
+     justify-content: 'center';
+     height: '100vh';
+`
