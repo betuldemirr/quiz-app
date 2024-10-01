@@ -30,22 +30,43 @@ export default function HomePage() {
      };
 
      return (
-          <Container>
+          <HomeContainer>
                <h1>Welcome, {username}!</h1>
-               <button onClick={handleStartQuiz} style={{ padding: '10px 20px', margin: '20px 0', fontSize: '18px' }}>
-                    Quiz Başla
-               </button>
-               <button onClick={handleLogout} style={{ padding: '10px 20px' }}>
+               <StartButton onClick={handleStartQuiz}>
+                    Start Quiz
+               </StartButton>
+               <LogoutButton onClick={handleLogout}>
                     Logout
-               </button>
-          </Container>
+               </LogoutButton>
+          </HomeContainer>
      );
 }
 
-const Container = styled.div`
-     display: 'flex';
-     flex-direction: 'column';
-     align-items: 'center';
-     justify-content: 'center';
-     height: '100vh';
+const HomeContainer = styled.div`
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+`
+
+const StartButton = styled.button`
+     background-color: #28a745;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+`
+
+const LogoutButton = styled.button`
+     background-color: #bababa;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
 `
