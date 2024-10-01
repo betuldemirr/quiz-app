@@ -22,6 +22,7 @@ export const fetchQuizQuestions = async (category: string, limit: number, diffic
           console.log("response:", response.data);
 
           return response.data;
+
      } catch (error: any) {
           throw new Error(`Error fetching questions: ${error.message}`);
      }
